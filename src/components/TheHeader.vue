@@ -4,7 +4,7 @@
 
 <template>
     <header class="header">
-        <nav class="header__content max-w-[90%] mx-auto p-4 flex items-center justify-around">
+        <nav class="header__content max-w-[90%] mx-auto p-4 flex items-center justify-between">
             <h1 class="font-bold text-3xl">
                 Фотограф
             </h1>

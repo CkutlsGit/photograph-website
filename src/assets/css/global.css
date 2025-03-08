@@ -15,7 +15,16 @@ body {
 }
 
 @layer utilities {
-
+  .color-orange {
+    color: #F86624;
+  }
+  .color-white {
+    color: #fff;
+  }
+  .bg-orange {
+    background-color: #F86624;
+  }
+  .bg-white {
+    background-color: #fff;
+  }
 }
-
-

@@ -1,21 +1,21 @@
 @import "tailwindcss";
+@import url(https://db.onlinewebfonts.com/c/478ee5574b65325cfc7cf2f42be6aedb?family=Stem);
+
+body {
+  font-family: "Stem", sans-serif;
+}
 
 @layer base {
-  html {
-    @apply bg-gray-900 text-gray-100;
-  }
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-blue-500 text-white px-4 py-2 rounded-md;
+  .animation-hover a:hover, .animation-hover button:hover {
+    @apply transition-all duration-300 opacity-50;
   }
 }
 
 @layer utilities {
-  .text-primary {
-    @apply text-blue-500;
-  }
+
 }
 
 

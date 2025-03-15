@@ -5,26 +5,12 @@ body {
   font-family: "Stem", sans-serif;
 }
 
-@layer base {
+@theme {
+  --color-light-orange-700: #F86624;
 }
 
 @layer components {
   .animation-hover a:hover, .animation-hover button:hover {
     @apply transition-all duration-300 opacity-80;
-  }
-}
-
-@layer utilities {
-  .color-orange {
-    color: #F86624;
-  }
-  .color-white {
-    color: #fff;
-  }
-  .bg-orange {
-    background-color: #F86624;
-  }
-  .bg-white {
-    background-color: #fff;
   }
 }

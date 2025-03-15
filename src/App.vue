@@ -18,8 +18,8 @@ import BaseButton from './components/BaseButton.vue'
       </p>
       </div>
       <footer class="main__buttons text-xl flex gap-6">
-        <BaseButton color="white" bgColor="orange">О фотографе</BaseButton>
-        <BaseButton color="orange" bgColor="white">Стоимость услуг</BaseButton>
+        <BaseButton color="text-white" bgColor="bg-light-orange-700">О фотографе</BaseButton>
+        <BaseButton color="text-light-orange-700" bgColor="bg-white">Стоимость услуг</BaseButton>
       </footer>
     </article>
   </main>

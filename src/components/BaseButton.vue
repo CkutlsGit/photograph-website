@@ -7,7 +7,7 @@ const props = defineProps<IBaseButton>()
 <template>
   <span class="animation-hover">
     <button
-      :class="`${props.color} ${props.bgColor}`"
+      :class="`${ props.color } ${ props.bgColor }`"
       class="rounded-full px-4 py-4 font-semibold cursor-pointer"
     >
       <slot></slot>

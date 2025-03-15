@@ -8,18 +8,18 @@ import BaseButton from "./components/BaseButton.vue"
   <main
     class="main bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/background-image.jpg')] bg-cover bg-center min-h-[800px]"
   >
-    <article
+    <div
       class="main__content text-white text-2xl max-w-[90%] mx-auto releative bottom-1/2 translate-y-1/2 pl-4"
     >
       <header class="main__title">
         <h1 class="text-5xl font-bold max-w-96">Фотограф в вашем городе</h1>
       </header>
-      <div class="main__description">
+      <article class="main__description">
         <p class="max-w-xl mt-4 mb-10">
           Фотографии, которые помогают вашему бизнесу. Обратитесь ко мне прямо
           сейчас
         </p>
-      </div>
+      </article>
       <footer class="main__buttons text-xl flex gap-6">
         <BaseButton color="text-white" bgColor="bg-light-orange-700"
           >О фотографе
@@ -28,18 +28,22 @@ import BaseButton from "./components/BaseButton.vue"
           >Стоимость услуг
         </BaseButton>
       </footer>
-    </article>
+    </div>
   </main>
   <section class="type-photograph">
-    <header class="type-photograph__title">
-      <h2 class="text-2xl font-bold">Виды съемок</h2>
-    </header>
     <div class="type-photograph__content">
-      <h1>Закажите подходящую</h1>
-      <p>
-        Посмотрите примеры фотографий и обратитесь ко мне за тем видом съемки,
-        который вам необходим
-      </p>
+      <header class="type-photograph__content-title">
+        <h1 class="text-2xl font-bold">Виды съемок</h1>
+      </header>
+      <article class="type-photograph__content-description">
+        <h1 class="text-4xl font-bold">Закажите подходящую</h1>
+        <p>
+          Посмотрите примеры фотографий и обратитесь ко мне за тем видом съемки,
+          который вам необходим
+        </p>
+      </article>
+      <footer class="type-photograph__content-items">
+      </footer>
     </div>
   </section>
 </template>

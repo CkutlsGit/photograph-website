@@ -26,10 +26,10 @@ const typeArray: Array<ITypePhotograph> = reactive([
     class="main bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/background-image.jpg')] bg-cover bg-center min-h-[800px]"
   >
     <div
-      class="main__content text-white text-2xl max-w-[90%] mx-auto releative bottom-1/2 translate-y-1/2 pl-4"
+      class="main__content text-white text-2xl max-w-[90%] mx-auto releative bottom-1/2 translate-y-1/2 pl-4 max-md:pl-0 max-md:max-w-full max-md:flex max-md:flex-col max-md:items-center max-md:text-center"
     >
       <header class="main__title">
-        <h1 class="text-5xl font-bold max-w-96">Фотограф в вашем городе</h1>
+        <h1 class="text-5xl font-bold max-w-96 max-sm:text-3xl">Фотограф в вашем городе</h1>
       </header>
       <article class="main__description">
         <p class="max-w-xl mt-4 mb-10">

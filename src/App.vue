@@ -10,14 +10,29 @@ interface ITypePhotograph {
   img: string
 }
 
+interface IAdvantages {
+  icon: string,
+  name: string,
+  description: string 
+}
+
 const typeArray: Array<ITypePhotograph> = reactive([
-  { name: "Свадебная фотосессия", img: "src/assets/img/1.png", price: 3000 },
-  { name: "Фотографии беременных", img: "src/assets/img/6.png", price: 3000 },
-  { name: "Детская фотосъемка", img: "src/assets/img/3.png", price: 3000 },
-  { name: "Семейная фотосессия", img: "src/assets/img/4.png", price: 3000 },
-  { name: "Фотографии еды", img: "src/assets/img/2.png", price: 3000 },
-  { name: "Эстрадная фотосъемка", img: "src/assets/img/5.png", price: 3000 },
+  { name: 'Свадебная фотосессия', img: 'src/assets/img/1.png', price: 3000 },
+  { name: 'Фотографии беременных', img: 'src/assets/img/6.png', price: 3000 },
+  { name: 'Детская фотосъемка', img: 'src/assets/img/3.png', price: 3000 },
+  { name: 'Семейная фотосессия', img: 'src/assets/img/4.png', price: 3000 },
+  { name: 'Фотографии еды', img: 'src/assets/img/2.png', price: 3000 },
+  { name: 'Эстрадная фотосъемка', img: 'src/assets/img/5.png', price: 3000 },
 ])
+
+const advantagesArray: Array<IAdvantages> = reactive([
+  { icon: 'src/assets/img/style-icon.svg', name: 'Стиль', description: 'Репортажная и постановочная съемка' },
+  { icon: 'src/assets/img/date-icon.svg', name: 'Сроки', description: 'Готовые фото уже через (15 дней)' },
+  { icon: 'src/assets/img/quality-icon.svg', name: 'Качество', description: 'Фототехника Premium-classa Canon' },
+  { icon: 'src/assets/img/guarantees-icon.svg', name: 'Гарантии', description: 'Работа производится по договору' },
+  { icon: 'src/assets/img/dress-code-icon.svg', name: 'Дресс-код', description: 'Стильный внешний вид фотографа' },
+  { icon: 'src/assets/img/videograph-icon.svg', name: 'Видеограф', description: 'Слаженная работа одной команды' },
+]) 
 </script>
 
 <template>
@@ -74,6 +89,27 @@ const typeArray: Array<ITypePhotograph> = reactive([
           </li>
         </ul>
       </footer>
+    </div>
+  </section>
+  <section class="advantages mt-32 pt-16 bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/background-image-advantages.jpg')] bg-cover bg-center min-h-[800px] text-white">
+    <div class="advantages__content max-w-[1280px] mx-auto flex flex-col justify-center text-center">
+      <header class="advantages__title">
+        <h2 class="text-xl font-medium">Почему рекомендуют меня</h2>
+        <h1 class="text-4xl font-bold mt-6">Преимущества</h1>
+      </header>
+      <article class="advantages__list mt-16">
+        <ul class="advantages__list--content grid grid-cols-3 gap-8 font-medium max-lg:grid-cols-2 max-sm:grid-cols-1">
+          <li class="advantage flex flex-col items-center" v-for="(advantage, index) in advantagesArray" :key="index">
+            <div class="advantage-icon flex justify-center">
+              <img :src="advantage.icon" :alt="advantage.name">
+            </div>
+            <h1 class="text-2xl mb-4">{{ advantage.name }}</h1>
+            <p class="text-xl">
+              {{ advantage.description }}
+            </p>
+          </li>
+        </ul>
+      </article>
     </div>
   </section>
 </template>

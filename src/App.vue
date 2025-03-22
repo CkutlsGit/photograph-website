@@ -41,7 +41,7 @@ const advantagesArray: Array<IAdvantages> = reactive([
     class="main bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/background-image.jpg')] bg-cover bg-center min-h-[800px]"
   >
     <div
-      class="main__content text-white text-2xl max-w-[90%] mx-auto releative bottom-1/2 translate-y-1/2 pl-4 max-md:pl-0 max-md:max-w-full max-md:flex max-md:flex-col max-md:items-center max-md:text-center"
+      class="main__content text-white text-2xl max-w-[90%] mx-auto pl-4 releative bottom-1/2 translate-y-1/2 max-md:max-w-full max-md:pl-0 max-md:flex max-md:flex-col max-md:items-center max-md:text-center"
     >
       <header class="main__title">
         <h1 class="text-5xl font-bold max-w-96 max-sm:text-3xl">Фотограф в вашем городе</h1>
@@ -65,7 +65,7 @@ const advantagesArray: Array<IAdvantages> = reactive([
   <section class="type-photograph mt-32">
     <div class="type-photograph__content max-w-[1280px] mx-auto text-center">
       <header class="type-photograph__content-title">
-        <h1 class="text-xl text-[#EA3546] font-medium max-sm:text-base">Виды съемок</h1>
+        <h1 class="text-[#EA3546] text-xl font-medium max-sm:text-base">Виды съемок</h1>
       </header>
       <article class="type-photograph__content-description">
         <h1 class="text-4xl font-bold my-6 max-sm:text-3xl max-sm:my-2">Закажите подходящую</h1>
@@ -74,11 +74,11 @@ const advantagesArray: Array<IAdvantages> = reactive([
           который вам необходим
         </p>
       </article>
-      <footer class="type-photograph__content-items mt-16 justify-center">
-        <ul class="flex justify-center flex-wrap gap-8 text-center font-bold">
+      <footer class="type-photograph__content-items mt-16">
+        <ul class="flex flex-wrap gap-8 justify-center text-center font-bold">
           <li v-for="(type, index) in typeArray" :key="index" class="relative">
-            <div class="relative w-96 h-96 max-sm:w-72 max-sm:h-72">
-              <h1 class="absolute inset-0 text-white text-2xl mt-72 max-sm:mt-52 max-sm:text-xl">
+            <div class="w-96 h-96 relative max-sm:w-72 max-sm:h-72">
+              <h1 class="text-white text-2xl mt-72 absolute inset-0 max-sm:mt-52 max-sm:text-xl">
                 {{ type.name }}
               </h1>
               <h2 class="absolute inset-0 text-white text-xl mt-82 max-sm:mt-60 max-sm:text-base">
@@ -91,14 +91,14 @@ const advantagesArray: Array<IAdvantages> = reactive([
       </footer>
     </div>
   </section>
-  <section class="advantages mt-32 pt-16 bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/background-image-advantages.jpg')] bg-cover bg-center min-h-[800px] text-white">
+  <section class="advantages text-white font-medium mt-32 pt-16 bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/background-image-advantages.jpg')] bg-cover bg-center min-h-[800px]">
     <div class="advantages__content max-w-[1280px] mx-auto flex flex-col justify-center text-center">
       <header class="advantages__title">
-        <h2 class="text-xl font-medium">Почему рекомендуют меня</h2>
+        <h2 class="text-xl">Почему рекомендуют меня</h2>
         <h1 class="text-4xl font-bold mt-6">Преимущества</h1>
       </header>
       <article class="advantages__list mt-16">
-        <ul class="advantages__list--content grid grid-cols-3 gap-8 font-medium max-lg:grid-cols-2 max-sm:grid-cols-1">
+        <ul class="advantages__list--content grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
           <li class="advantage flex flex-col items-center" v-for="(advantage, index) in advantagesArray" :key="index">
             <div class="advantage-icon flex justify-center">
               <img :src="advantage.icon" :alt="advantage.name">

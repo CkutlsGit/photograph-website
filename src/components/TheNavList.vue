@@ -19,7 +19,7 @@
 
 <template>
   <ul
-    class="header__list flex items-center text-xl font-semibold gap-10 animation-hover max-xl:text-lg max-lg:hidden"
+    class="header__list text-xl font-semibold flex items-center gap-10 animation-hover max-xl:text-lg max-lg:hidden"
   >
     <li class="header__item">
       <a href="#" class="header__link">Отзывы</a>
@@ -28,7 +28,7 @@
       <a href="#" class="header__link">Контакты</a>
     </li>
     <li class="header__item text-center">
-      <h5 class="header__number-title text-xs text-[#000000B2] -mb-2">
+      <h5 class="header__number-title text-[#000000B2] text-xs -mb-2">
         Запишитесь на съемку
       </h5>
       <a href="tel:+74951234567" class="header__number-link"
@@ -79,7 +79,7 @@
         <transition name="burger-elements">
           <ul
             v-if="isOpenMenu"
-            class="header__nav-list--hamburger-menu absolute flex flex-col justify-center gap-y-16 items-center left-0 top-16 z-10 min-w-full min-h-full bg-light-orange-700 text-white font-bold text-3xl animation-hover"
+            class="header__nav-list--hamburger-menu text-white font-bold text-3xl bg-light-orange-700 min-w-full min-h-full flex flex-col gap-y-16 items-center justify-center absolute left-0 top-16 z-10 animation-hover"
           >
             <li class="header__item">
               <a href="#" class="header__link">Отзывы</a>
@@ -88,7 +88,7 @@
               <a href="#" class="header__link">Контакты</a>
             </li>
             <li class="header__item text-center">
-              <h5 class="header__number-title text-xs text-[#000000B2] -mb-2 max-lg:text-white">
+              <h5 class="header__number-title text-[#000000B2] text-xs -mb-2 max-lg:text-white">
                 Запишитесь на съемку
               </h5>
               <a href="tel:+74951234567" class="header__number-link"

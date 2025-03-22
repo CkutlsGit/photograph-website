@@ -13,5 +13,4 @@ import TheNavList from "./TheNavList.vue"
   </header>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

@@ -20,42 +20,42 @@ interface IFeedback extends IAdvantage {
 }
 
 const typeArray: Array<ITypePhotograph> = reactive([
-  { name: "Свадебная фотосессия", icon: "src/assets/img/1.png", price: 3000 },
-  { name: "Фотографии беременных", icon: "src/assets/img/6.png", price: 3000 },
-  { name: "Детская фотосъемка", icon: "src/assets/img/3.png", price: 3000 },
-  { name: "Семейная фотосессия", icon: "src/assets/img/4.png", price: 3000 },
-  { name: "Фотографии еды", icon: "src/assets/img/2.png", price: 3000 },
-  { name: "Эстрадная фотосъемка", icon: "src/assets/img/5.png", price: 3000 },
+  { name: "Свадебная фотосессия", icon: "src/assets/img/base/types-photo/1.png", price: 3000 },
+  { name: "Фотографии беременных", icon: "src/assets/img/base/types-photo/6.png", price: 3000 },
+  { name: "Детская фотосъемка", icon: "src/assets/img/base/types-photo/3.png", price: 3000 },
+  { name: "Семейная фотосессия", icon: "src/assets/img/base/types-photo/4.png", price: 3000 },
+  { name: "Фотографии еды", icon: "src/assets/img/base/types-photo/2.png", price: 3000 },
+  { name: "Эстрадная фотосъемка", icon: "src/assets/img/base/types-photo/5.png", price: 3000 },
 ])
 
 const advantagesArray: Array<IAdvantage> = reactive([
   {
-    icon: "src/assets/img/style-icon.svg",
+    icon: "src/assets/img/icons/advantages/style-icon.svg",
     name: "Стиль",
     description: "Репортажная и постановочная съемка",
   },
   {
-    icon: "src/assets/img/date-icon.svg",
+    icon: "src/assets/img/icons/advantages/date-icon.svg",
     name: "Сроки",
     description: "Готовые фото уже через (15 дней)",
   },
   {
-    icon: "src/assets/img/quality-icon.svg",
+    icon: "src/assets/img/icons/advantages/quality-icon.svg",
     name: "Качество",
     description: "Фототехника Premium-classa Canon",
   },
   {
-    icon: "src/assets/img/guarantees-icon.svg",
+    icon: "src/assets/img/icons/advantages/guarantees-icon.svg",
     name: "Гарантии",
     description: "Работа производится по договору",
   },
   {
-    icon: "src/assets/img/dress-code-icon.svg",
+    icon: "src/assets/img/icons/advantages/dress-code-icon.svg",
     name: "Дресс-код",
     description: "Стильный внешний вид фотографа",
   },
   {
-    icon: "src/assets/img/videograph-icon.svg",
+    icon: "src/assets/img/icons/advantages/videograph-icon.svg",
     name: "Видеограф",
     description: "Слаженная работа одной команды",
   },
@@ -71,7 +71,7 @@ const advantagesArray: Array<IAdvantage> = reactive([
 <template>
   <TheHeader />
   <main
-    class="main bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/background-image.jpg')] bg-cover bg-center min-h-[800px]"
+    class="main bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/backgrounds/background-image.jpg')] bg-cover bg-center min-h-[800px]"
   >
     <div
       class="main__content text-white text-2xl max-w-[90%] mx-auto pl-4 releative bottom-1/2 translate-y-1/2 max-md:max-w-full max-md:pl-0 max-md:flex max-md:flex-col max-md:items-center max-md:text-center"
@@ -137,7 +137,7 @@ const advantagesArray: Array<IAdvantage> = reactive([
     </div>
   </section>
   <section
-    class="advantages text-white font-medium mt-32 pt-16 bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/background-image-advantages.jpg')] bg-cover bg-center min-h-[800px]"
+    class="advantages text-white font-medium mt-32 pt-16 bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/backgrounds/background-image-advantages.jpg')] bg-cover bg-center min-h-[800px]"
   >
     <div
       class="advantages__content max-w-[1280px] mx-auto flex flex-col justify-center text-center"

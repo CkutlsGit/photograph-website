@@ -1,8 +1,10 @@
 <script setup lang="ts">
-import { reactive } from "vue"
+import { ref, reactive } from "vue"
 
 import TheHeader from "./components/TheHeader.vue"
 import BaseButton from "./components/BaseButton.vue"
+
+const number = ref('')
 
 interface ITypePhotograph {
   name: string
@@ -156,6 +158,30 @@ const advantagesArray: Array<IAdvantages> = reactive([
           </li>
         </ul>
       </article>
+    </div>
+  </section>
+  <section class="order mt-28">
+    <div class="order__content text-center">
+      <header class="order__title">
+        <h1 class="text-4xl font-bold">Закажите съемку прямо сейчас</h1>
+        <p class="text-base font-semibold max-w-3xl mx-auto mt-4">
+          Я проконсультирую Вас по основным вопросам подготовки к фотосессии, а
+          также расскажу о современных тенденциях в фотографии.
+        </p>
+      </header>
+      <article class="order__input mt-10">
+        <MaskInput class="input-style rounded-lg mr-4" v-model="number" placeholder="+7 (000) 000-0000" mask="+# (###) ###-####"/>
+        <BaseButton color="text-white" bgColor="bg-light-orange-700"
+          >Оставить заявку
+        </BaseButton>
+      </article>
+      <footer class="order__info mt-6">
+        <p class="text-[#00000066] font-semibold max-w-lg mx-auto">
+          Оставляя заявку, вы соглашаетесь на
+          <span>обработку персональных данных</span> и с
+          <span>условиями бронирования счёта</span>
+        </p>
+      </footer>
     </div>
   </section>
 </template>

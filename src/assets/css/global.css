@@ -9,8 +9,23 @@ body {
   --color-light-orange-700: #F86624;
 }
 
+@layer base {
+  body {
+    @apply text-base
+  }
+  input::placeholder {
+    @apply text-[#00000033] font-bold
+  }
+  span {
+    @apply text-light-orange-700
+  }
+}
+
 @layer components {
   .animation-hover a:hover, .animation-hover button:hover {
     @apply transition-all duration-300 opacity-80;
+  }
+  .input-style {
+    @apply border border-[#0000001A] font-bold py-2 px-3
   }
 }

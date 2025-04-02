@@ -1,33 +1,34 @@
 <script setup lang="ts">
 import { ref, reactive } from "vue"
+import type { IBase } from "./interfaces"
 
 import TheHeader from "./components/TheHeader.vue"
 import BaseButton from "./components/BaseButton.vue"
 
-const number = ref('')
+const phoneNumber = ref<string>('')
 
-interface ITypePhotograph {
-  name: string
+interface ITypePhotograph extends IBase {
   price: number
-  img: string
 }
 
-interface IAdvantages {
-  icon: string
-  name: string
+interface IAdvantage extends IBase {
   description: string
 }
 
+interface IFeedback extends IAdvantage {
+  jobUser: string
+}
+
 const typeArray: Array<ITypePhotograph> = reactive([
-  { name: "Свадебная фотосессия", img: "src/assets/img/1.png", price: 3000 },
-  { name: "Фотографии беременных", img: "src/assets/img/6.png", price: 3000 },
-  { name: "Детская фотосъемка", img: "src/assets/img/3.png", price: 3000 },
-  { name: "Семейная фотосессия", img: "src/assets/img/4.png", price: 3000 },
-  { name: "Фотографии еды", img: "src/assets/img/2.png", price: 3000 },
-  { name: "Эстрадная фотосъемка", img: "src/assets/img/5.png", price: 3000 },
+  { name: "Свадебная фотосессия", icon: "src/assets/img/1.png", price: 3000 },
+  { name: "Фотографии беременных", icon: "src/assets/img/6.png", price: 3000 },
+  { name: "Детская фотосъемка", icon: "src/assets/img/3.png", price: 3000 },
+  { name: "Семейная фотосессия", icon: "src/assets/img/4.png", price: 3000 },
+  { name: "Фотографии еды", icon: "src/assets/img/2.png", price: 3000 },
+  { name: "Эстрадная фотосъемка", icon: "src/assets/img/5.png", price: 3000 },
 ])
 
-const advantagesArray: Array<IAdvantages> = reactive([
+const advantagesArray: Array<IAdvantage> = reactive([
   {
     icon: "src/assets/img/style-icon.svg",
     name: "Стиль",
@@ -59,6 +60,12 @@ const advantagesArray: Array<IAdvantages> = reactive([
     description: "Слаженная работа одной команды",
   },
 ])
+
+  const feedbacksArray: Array<IFeedback> = reactive([
+    { name: 'Юрий Ставничий', icon: '123', description: 'Это супер крутая инструкция и вы делаете очень полезную вещь. Спасибо', jobUser: 'Фотограф' },
+    { name: 'Александра Селезнева', icon: '123', description: 'Работа с сервисом приносит радость, потому что высочайший профессионализм, удобство, оперативность, и просто приятные люди!', jobUser: 'Фотограф' },
+    { name: 'Оля Павлова', icon: '123', description: 'Спасибо большое за помощь и содействие!', jobUser: 'Фотограф' },
+  ])
 </script>
 
 <template>
@@ -122,7 +129,7 @@ const advantagesArray: Array<IAdvantages> = reactive([
               >
                 от {{ type.price }} ₽
               </h2>
-              <img class="w-full h-full" :src="type.img" alt="" />
+              <img class="w-full h-full" :src="type.icon" alt="" />
             </div>
           </li>
         </ul>
@@ -170,7 +177,7 @@ const advantagesArray: Array<IAdvantages> = reactive([
         </p>
       </header>
       <article class="order__input mt-10">
-        <MaskInput class="input-style rounded-lg mr-4 max-sm:mb-4" v-model="number" placeholder="+7 (000) 000-0000" mask="+# (###) ###-####"/>
+        <MaskInput class="input-style rounded-lg mr-4 max-sm:mb-4" v-model="phoneNumber" placeholder="+7 (000) 000-0000" mask="+# (###) ###-####"/>
         <BaseButton color="text-white" bgColor="bg-light-orange-700"
           >Оставить заявку
         </BaseButton>
@@ -182,6 +189,26 @@ const advantagesArray: Array<IAdvantages> = reactive([
           <span>условиями бронирования счёта</span>
         </p>
       </footer>
+    </div>
+  </section>
+  <section class="feedbacks">
+    <div class="feedbacks__content">
+      <header class="feedbacks__title">
+        <h1>Отзывы</h1>
+        <h2>Настоящие отзывы моих клиентов</h2>
+      </header>
+      <article class="feedbacks__list">
+        <ul>
+          <li v-for="(feedback, index) in feedbacksArray" :key="index">
+            <img :src="feedback.icon" :alt="`Фото пользователя - ${ feedback.name }`">
+            <p>
+              {{ feedback.description }}
+            </p>
+            <h2>{{ feedback.name }}</h2>
+            <h3>{{ feedback.jobUser }}</h3>
+          </li>
+        </ul>
+      </article>
     </div>
   </section>
 </template>

@@ -177,7 +177,7 @@ const advantagesArray: Array<IAdvantage> = reactive([
         </p>
       </header>
       <article class="order__input mt-10">
-        <MaskInput class="input-style rounded-lg mr-4 max-sm:mb-4" v-model="phoneNumber" placeholder="+7 (000) 000-0000" mask="+# (###) ###-####"/>
+        <MaskInput class="input-style mr-4 rounded-lg max-sm:mb-4" v-model="phoneNumber" placeholder="+7 (000) 000-0000" mask="+# (###) ###-####"/>
         <BaseButton color="text-white" bgColor="bg-light-orange-700"
           >Оставить заявку
         </BaseButton>
@@ -191,7 +191,7 @@ const advantagesArray: Array<IAdvantage> = reactive([
       </footer>
     </div>
   </section>
-  <section class="feedbacks mt-28 bg-[#F7F8FA] min-h-[850px] pt-28">
+  <section class="feedbacks bg-[#F7F8FA] min-h-[850px] mt-28 pt-28">
     <div class="feedbacks__content text-center">
       <header class="feedbacks__title">
         <h1 class="text-5xl font-bold mb-6 max-sm:text-3xl">Отзывы</h1>
@@ -203,7 +203,7 @@ const advantagesArray: Array<IAdvantage> = reactive([
             <div class="flex justify-center">
               <img :src="feedback.icon" :alt="`Фото пользователя - ${ feedback.name }`">
             </div>
-            <p class="max-w-72 mx-auto my-8 font-bold text-2xl max-sm:text-lg">
+            <p class="text-2xl font-bold max-w-72 mx-auto my-8 max-sm:text-lg">
               {{ feedback.description }}
             </p>
             <h2 class="text-lg font-medium mb-1">{{ feedback.name }}</h2>

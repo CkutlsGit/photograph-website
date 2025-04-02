@@ -62,9 +62,9 @@ const advantagesArray: Array<IAdvantage> = reactive([
 ])
 
   const feedbacksArray: Array<IFeedback> = reactive([
-    { name: 'Юрий Ставничий', icon: '123', description: 'Это супер крутая инструкция и вы делаете очень полезную вещь. Спасибо', jobUser: 'Фотограф' },
-    { name: 'Александра Селезнева', icon: '123', description: 'Работа с сервисом приносит радость, потому что высочайший профессионализм, удобство, оперативность, и просто приятные люди!', jobUser: 'Фотограф' },
-    { name: 'Оля Павлова', icon: '123', description: 'Спасибо большое за помощь и содействие!', jobUser: 'Фотограф' },
+    { name: 'Юрий Ставничий', icon: 'src/assets/img/icons/feedbacks/user-yuriy.svg', description: 'Это супер крутая инструкция и вы делаете очень полезную вещь. Спасибо', jobUser: 'Фотограф' },
+    { name: 'Александра Селезнева', icon: 'src/assets/img/icons/feedbacks/user-alexandra.svg', description: 'Работа с сервисом приносит радость, потому что высочайший профессионализм, удобство, оперативность, и просто приятные люди!', jobUser: 'Фотограф' },
+    { name: 'Оля Павлова', icon: 'src/assets/img/icons/feedbacks/user-olga.svg', description: 'Спасибо большое за помощь и содействие!', jobUser: 'Фотограф' },
   ])
 </script>
 
@@ -183,7 +183,7 @@ const advantagesArray: Array<IAdvantage> = reactive([
         </BaseButton>
       </article>
       <footer class="order__info mt-6 max-sm:mt-2">
-        <p class="text-[#00000066] font-semibold max-w-lg mx-auto max-sm:text-xs">
+        <p class="text-transparent-black-light font-semibold max-w-lg mx-auto max-sm:text-xs">
           Оставляя заявку, вы соглашаетесь на
           <span>обработку персональных данных</span> и с
           <span>условиями бронирования счёта</span>
@@ -191,21 +191,23 @@ const advantagesArray: Array<IAdvantage> = reactive([
       </footer>
     </div>
   </section>
-  <section class="feedbacks">
-    <div class="feedbacks__content">
+  <section class="feedbacks mt-28 bg-[#F7F8FA] min-h-[850px] pt-28">
+    <div class="feedbacks__content text-center">
       <header class="feedbacks__title">
-        <h1>Отзывы</h1>
-        <h2>Настоящие отзывы моих клиентов</h2>
+        <h1 class="text-5xl font-bold mb-6 max-sm:text-3xl">Отзывы</h1>
+        <h2 class="text-xl font-medium">Настоящие отзывы моих клиентов</h2>
       </header>
-      <article class="feedbacks__list">
-        <ul>
-          <li v-for="(feedback, index) in feedbacksArray" :key="index">
-            <img :src="feedback.icon" :alt="`Фото пользователя - ${ feedback.name }`">
-            <p>
+      <article class="feedbacks__list mt-20">
+        <ul class="flex justify-center gap-6 max-w-[1280px] mx-auto max-xl:flex-col">
+          <li class="bg-white border-transparent-black rounded-2xl w-96 h-full mx-auto px-8 py-10 max-sm:w-64" v-for="(feedback, index) in feedbacksArray" :key="index">
+            <div class="flex justify-center">
+              <img :src="feedback.icon" :alt="`Фото пользователя - ${ feedback.name }`">
+            </div>
+            <p class="max-w-72 mx-auto my-8 font-bold text-2xl max-sm:text-lg">
               {{ feedback.description }}
             </p>
-            <h2>{{ feedback.name }}</h2>
-            <h3>{{ feedback.jobUser }}</h3>
+            <h2 class="text-lg font-medium mb-1">{{ feedback.name }}</h2>
+            <h3 class="text-xs text-transparent-black-light font-bold">{{ feedback.jobUser }}</h3>
           </li>
         </ul>
       </article>

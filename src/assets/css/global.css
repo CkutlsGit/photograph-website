@@ -7,6 +7,8 @@ body {
 
 @theme {
   --color-light-orange-700: #F86624;
+  --color-transparent-black: #0000001A;
+  --color-transparent-black-light: #00000066;
 }
 
 @layer base {
@@ -26,6 +28,6 @@ body {
     @apply transition-all duration-300 opacity-80;
   }
   .input-style {
-    @apply border border-[#0000001A] font-bold py-2 px-3
+    @apply border border-transparent-black font-bold py-2 px-3
   }
 }

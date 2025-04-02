@@ -2,8 +2,8 @@
 import { ref, reactive } from "vue"
 import type { IBase } from "./interfaces"
 
-import TheHeader from "./components/TheHeader.vue"
-import BaseButton from "./components/BaseButton.vue"
+import TheHeader from "./components/header/TheHeader.vue"
+import BaseButton from "./components/base/BaseButton.vue"
 
 const phoneNumber = ref<string>('')
 

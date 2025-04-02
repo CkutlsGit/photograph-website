@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { IBaseButton } from "../interfaces"
+import type { IBaseButton } from "../../interfaces"
 
 const props = defineProps<IBaseButton>()
 </script>

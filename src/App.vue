@@ -163,20 +163,20 @@ const advantagesArray: Array<IAdvantages> = reactive([
   <section class="order mt-28">
     <div class="order__content text-center">
       <header class="order__title">
-        <h1 class="text-4xl font-bold">Закажите съемку прямо сейчас</h1>
-        <p class="text-base font-semibold max-w-3xl mx-auto mt-4">
+        <h1 class="text-5xl font-bold max-md:text-3xl">Закажите съемку прямо сейчас</h1>
+        <p class="font-semibold max-w-3xl mx-auto mt-4 max-md:max-w-xl">
           Я проконсультирую Вас по основным вопросам подготовки к фотосессии, а
           также расскажу о современных тенденциях в фотографии.
         </p>
       </header>
       <article class="order__input mt-10">
-        <MaskInput class="input-style rounded-lg mr-4" v-model="number" placeholder="+7 (000) 000-0000" mask="+# (###) ###-####"/>
+        <MaskInput class="input-style rounded-lg mr-4 max-sm:mb-4" v-model="number" placeholder="+7 (000) 000-0000" mask="+# (###) ###-####"/>
         <BaseButton color="text-white" bgColor="bg-light-orange-700"
           >Оставить заявку
         </BaseButton>
       </article>
-      <footer class="order__info mt-6">
-        <p class="text-[#00000066] font-semibold max-w-lg mx-auto">
+      <footer class="order__info mt-6 max-sm:mt-2">
+        <p class="text-[#00000066] font-semibold max-w-lg mx-auto max-sm:text-xs">
           Оставляя заявку, вы соглашаетесь на
           <span>обработку персональных данных</span> и с
           <span>условиями бронирования счёта</span>

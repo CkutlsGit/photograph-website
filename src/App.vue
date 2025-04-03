@@ -158,7 +158,7 @@ const advantagesArray: Array<IAdvantage> = reactive([
       <footer class="type-photograph__content-items mt-16">
         <ul class="flex flex-wrap gap-8 justify-center text-center font-bold">
           <li v-for="(type, index) in typeArray" :key="index" class="relative">
-            <div class="w-96 h-96 relative max-sm:w-72 max-sm:h-72">
+            <div class="w-[350px] h-96 relative max-sm:w-72 max-sm:h-72">
               <h1
                 class="text-white text-2xl mt-72 absolute inset-0 max-sm:mt-52 max-sm:text-xl"
               >
@@ -180,7 +180,7 @@ const advantagesArray: Array<IAdvantage> = reactive([
     class="advantages text-white font-medium mt-32 pt-16 bg-[linear-gradient(#662E9B66,#662E9B66),url('../img/backgrounds/background-image-advantages.jpg')] bg-cover bg-center min-h-[800px]"
   >
     <div
-      class="advantages__content max-w-[1280px] mx-auto flex flex-col justify-center text-center"
+      class="advantages__content max-w-[1110px] mx-auto flex flex-col justify-center text-center"
     >
       <header class="advantages__title">
         <h2 class="text-xl">Почему рекомендуют меня</h2>
@@ -191,7 +191,7 @@ const advantagesArray: Array<IAdvantage> = reactive([
           class="advantages__list--content grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1"
         >
           <li
-            class="advantage flex flex-col items-center mb-4"
+            class="advantage flex flex-col items-center mb-4 w-[350px]"
             v-for="(advantage, index) in advantagesArray"
             :key="index"
           >

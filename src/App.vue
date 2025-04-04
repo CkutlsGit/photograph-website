@@ -6,6 +6,7 @@ import SectionAdvantages from "./components/sections/SectionAdvantages.vue"
 import SectionOrder from "./components/sections/SectionOrder.vue"
 import SectionFeedbacks from "./components/sections/SectionFeedbacks.vue"
 import SectionPrice from "./components/sections/SectionPrice.vue"
+import SectionAbout from "./components/sections/SectionAbout.vue"
 </script>
 
 <template>
@@ -22,6 +23,8 @@ import SectionPrice from "./components/sections/SectionPrice.vue"
   <SectionFeedbacks />
 
   <SectionPrice />
+
+  <SectionAbout />
 </template>
 
 <style scoped></style>

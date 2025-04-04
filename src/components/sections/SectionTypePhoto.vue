@@ -44,7 +44,7 @@ const typeArray: Array<ITypePhotograph> = reactive([
   <section class="type-photograph mt-32">
     <div class="type-photograph__content max-w-[1280px] mx-auto text-center">
       <header class="type-photograph__content-title">
-        <h1 class="text-[#EA3546] text-xl font-medium max-sm:text-base">
+        <h1 class="text-light-red-700 text-xl font-medium max-sm:text-base">
           Виды съемок
         </h1>
       </header>

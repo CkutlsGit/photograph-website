@@ -49,10 +49,10 @@ const advantagesArray: Array<IAdvantage> = reactive([
       </header>
       <article class="advantages__list mt-16">
         <ul
-          class="advantages__list--content grid grid-cols-3 gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1"
+          class="advantages__list--content grid grid-cols-3 gap-8 max-xl:grid-cols-2 max-lg:grid-cols-1"
         >
           <li
-            class="advantage flex flex-col items-center mb-4 w-[350px]"
+            class="advantage mb-4"
             v-for="(advantage, index) in advantagesArray"
             :key="index"
           >

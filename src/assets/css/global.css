@@ -7,6 +7,7 @@ body {
 
 @theme {
   --color-light-orange-700: #F86624;
+  --color-light-red-700: #EA3546;
   --color-transparent-black: #0000001A;
   --color-transparent-black-light: #00000066;
 }

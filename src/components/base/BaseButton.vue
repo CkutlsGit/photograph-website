@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import type { IBaseButton } from "../../interfaces"
+interface IBaseButton {
+    color: string
+    bgColor: string
+}
 
 const props = defineProps<IBaseButton>()
 </script>

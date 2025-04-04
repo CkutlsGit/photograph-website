@@ -3,9 +3,6 @@ export interface IBase {
     icon: string
 }
 
-export interface IBaseButton {
-    color: string
-    bgColor: string
+export interface IAdvantage extends IBase {
+    description: string
 }
-
-
